@@ -62,7 +62,9 @@ def fetch_feed_items(feeds):
 
 def main():
     os.makedirs("dist", exist_ok=True)
-    date_display = datetime.now().strftime("%A, %B %d, %Y").upper()
+from datetime import timezone, timedelta
+sydney_time = datetime.now(timezone(timedelta(hours=11)))
+date_display = sydney_time.strftime("%A, %B %d, %Y").upper()
     world_news = fetch_feed_items(WORLD_FEEDS)
     if len(world_news) < 6:
         world_news.extend(DEFAULT_WORLD[:6 - len(world_news)])
