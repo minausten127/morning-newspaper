@@ -72,6 +72,9 @@ date_display = sydney_time.strftime("%A, %B %d, %Y").upper()
     col1, col2 = world_news[:3], world_news[3:6]
 
     html_content = f"""<!DOCTYPE html><html><head><meta charset="utf-8">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
     <style>
       @page {{ size: A4 portrait; margin: 11mm 12mm 13mm 12mm; background: #fdfbf7; }}
       body {{ font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, serif; margin:0; padding:0; background:transparent; color:#1a1a1a; font-size:9.5pt; line-height:1.5; -webkit-print-color-adjust:exact; print-color-adjust:exact; }}
